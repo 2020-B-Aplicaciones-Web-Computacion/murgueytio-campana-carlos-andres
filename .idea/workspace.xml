@@ -2,12 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="254d6463-fb7f-442e-8fd5-5aebc7b1d0fe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/clases/src/mascota/mascota.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clases/src/mascota/mascota.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clases/src/usuario/usuario.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clases/src/usuario/usuario.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/app.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/app.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -21,6 +34,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="ts.external.directory.path" value="C:\Users\Reyum\OneDrive\Documentos\POLIARCHIVOS\Septimo_Semestre\Web\Segundo Bimestre\RepoGit\murgueytio-campana-carlos-andres\clases\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -33,11 +49,23 @@
       <updated>1612192729633</updated>
       <workItem from="1612192731623" duration="1566000" />
       <workItem from="1612272245952" duration="1202000" />
-      <workItem from="1613572765347" duration="808000" />
+      <workItem from="1613572765347" duration="4901000" />
+      <workItem from="1614003467596" duration="6827000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
