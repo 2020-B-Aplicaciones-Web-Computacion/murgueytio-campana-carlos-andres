@@ -12,6 +12,8 @@ export class AppController {
     }
 }
 
+
+
 // Clases - TYPESCRIPT
 /*
 class Nombre {
@@ -48,7 +50,7 @@ class Nombre {
 
 
 }
-*/
+
 
 //VARIABLES PRIMITIVAS
 //MUTABLES, SE PUEDEN REASIGNAR
@@ -63,6 +65,7 @@ variableTres = 1; //No ok */
 //Tipos de variables
 
 //es preferible usar siempre const
+/*
 const texto: string = "";
 const textoConComillasSimples: string = '';
 const numeroEntero: number = 1;
@@ -79,9 +82,9 @@ class Usuario {
     }
 }
 
-/*const usuario: Usuario = new Usuario (nombre:'Carlos', apellido:'Murgueytio');
+const usuario: Usuario = new Usuario (nombre:'Carlos', apellido:'Murgueytio');
 usuario.nombre = 'Andres';
-usuario.apellido= ' Murgueytio';*/
+usuario.apellido= ' Murgueytio';
 
 interface UsuarioInterface {
     nombre: string;
@@ -222,4 +225,4 @@ if (undefined) {
 
 //En resumen, los strings vacios y el cero son falsos, tambien null y undefined
 
-
+*/

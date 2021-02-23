@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="254d6463-fb7f-442e-8fd5-5aebc7b1d0fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/clases/src/mascota/mascota.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clases/src/mascota/mascota.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clases/src/usuario/usuario.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clases/src/usuario/usuario.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clases/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/app.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/src/usuario/usuario.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/usuario/usuario.controller.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +47,7 @@
       <workItem from="1612272245952" duration="1202000" />
       <workItem from="1613572765347" duration="4901000" />
       <workItem from="1614003467596" duration="6827000" />
+      <workItem from="1614089049498" duration="12755000" />
     </task>
     <servers />
   </component>
@@ -67,5 +64,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
