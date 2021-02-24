@@ -27,19 +27,15 @@ export class UsuarioController {
         @Param() parametrosRuta,
         @Res({passthrough: true})
             response,
-        @Body() numeroUno,
-        @Body() numeroDos
     ) {
 
-        //console.log(parametrosRuta);
+        console.log(parametrosRuta.numeroUno);
+        console.log(parametrosRuta.numeroDos);
         response.header('nueva-header', 'otro valor');
-        let numerParam: any = numeroUno;
-        let numer2Param: any = numeroDos;
-        console.log(numerParam);
-        console.log(numer2Param);
-
+        let valorUno: number = parametrosRuta.numeroUno;
+        let valorDos: number = parametrosRuta.numeroDos;
         let suma: number = 0;
-        //suma = parametrosRuta[0] + parametrosRuta[1];
+        suma = (valorUno + valorDos);
         console.log(suma);
         return suma;
     }
