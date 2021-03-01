@@ -5,8 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clases/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/clases/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clases/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/clases/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/app.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clases/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/src/usuario/usuario.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/usuario/usuario.controller.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +52,9 @@
       <workItem from="1614089049498" duration="12755000" />
       <workItem from="1614129652224" duration="438000" />
       <workItem from="1614176420462" duration="10619000" />
+      <workItem from="1614481430500" duration="116000" />
+      <workItem from="1614608074317" duration="998000" />
+      <workItem from="1614609530814" duration="4351000" />
     </task>
     <servers />
   </component>
