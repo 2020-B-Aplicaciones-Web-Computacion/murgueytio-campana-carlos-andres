@@ -1,8 +1,83 @@
 import {Controller, Get, Req, HttpCode, Header, Headers, Param, Res, Post, Body, Query, Put} from "@nestjs/common";
+import {FindConditions, FindManyOptions, Like} from "typeorm";
+import {UsuarioService} from "./usuario.service";
+import {UsuarioEntity} from "./usuario.entity";
 
 
 @Controller('usuario')
 export class UsuarioController {
+
+    constructor(
+        private _usuarioService: UsuarioService,
+    ) {
+    }
+
+    @Post('')
+    crearUsuario(
+        @Body()
+            parametrosCuerpo
+    ) {
+        return this._usuarioService.usuarioEntity.save({
+            nombre: parametrosCuerpo.nombre,
+            apellido: parametrosCuerpo.apellido
+        });
+    }
+
+    @Get('usuarios')
+    async obtenerUsuario(
+        @Query()
+            parametrosConsulta,
+        @Res()
+            response,
+    ) {
+        let take = 10; //Dame 10 registros
+        let skip = 0; //Me salto 0 registros
+        let order = 'ASC';
+        if (parametrosConsulta.skip) {
+            skip = parametrosConsulta.skip;
+        }
+        if (parametrosConsulta.take) {
+            take = parametrosConsulta.take;
+        }
+        if (parametrosConsulta.order) {
+            order = parametrosConsulta.order;
+        }
+
+        //Where id = 4 and nombre = 'Carlos'
+        let consultaWhereAnd: FindConditions<UsuarioEntity>[] = [
+            {
+                id: 4,
+                nombre: 'Carlos'
+            }
+        ];
+
+        let consultaWhereOR: FindConditions<UsuarioEntity>[] = [  //Si el arreglo solo tiene un objeto = AND, si tiene mas de uno= OR
+            {
+                nombre: Like(parametrosConsulta.busqueda ? parametrosConsulta.busqueda : '%%'),
+                //estado: 'SOLTERO'
+            },
+            {
+                apellido: Like(parametrosConsulta.busqueda ? parametrosConsulta.busqueda : '%%'),
+                //estado: 'SOLTERO'
+            }
+        ]
+
+        let consulta: FindManyOptions<UsuarioEntity> = {
+            where: consultaWhereOR,
+            take: take,
+            skip: skip,
+            order: {
+                id: order === 'ASC' ? 'ASC' : 'DESC',
+            },
+        };
+
+
+        let datos = await this._usuarioService.usuarioEntity.findAndCount(consulta);
+        response.render('inicio', {
+            datos: datos
+        });
+    }
+
 
     @Get('hola')
     @HttpCode(200)
@@ -73,7 +148,7 @@ export class UsuarioController {
     ) {
         console.log(query);
         var resultado;
-        let valores:number;
+        let valores: number;
         //valores = Object.values(query); // ['1', '2']
         //resultado = valores[0] + valores[1];
         //resultado = (parseInt(valores[0]) + parseInt(parametrosQuery.numDos));
@@ -111,13 +186,13 @@ export class UsuarioController {
 
     @Get('dividir') //Con get y headers
     @HttpCode(201)
-    @Header ('numeroUno', 'none')
-    @Header ('numeroDos', 'none')
+    @Header('numeroUno', 'none')
+    @Header('numeroDos', 'none')
     dividir(
         @Res({passthrough: true})
             response,
         @Headers() headers,
-    ){
+    ) {
         //console.log(headers);
         var resultado: number = 0;
         //resultado = (parseInt(parametrosRuta.numeroUno) * parseInt(parametrosRuta.numeroDos));
@@ -125,6 +200,7 @@ export class UsuarioController {
         return 'El valor de la división es igual a : ' + resultado;
 
     }
+
 
 }
 

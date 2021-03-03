@@ -1,0 +1,28 @@
+<% const arreglo = [1, 2, 3, 4, 5] %>
+<% const nombre = 'Carlos' %>
+<% const numero = 1 + 10 %>
+<h1><%= nombre %>-<%= numero %></h1>
+<ul>
+    <% for (let numero of arreglo) %>
+    <li>Numero: <%= numero %></li>
+</ul>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Acciones</th>
+    </tr>
+    <% for (let usuario of datos[0]){ %>
+        <tr>
+            <td><%= usuario.id %></td>
+            <td><%= usuario.nombre %></td>
+            <td><%= usuario.apellido %></td>
+            <td>
+                <button>Editar</button>
+                <button>Eliminar</button>
+            </td>
+        </tr>
+    <% } %>
+</table>
+<p>Numero total de registros: <%= datos[1] %></p>

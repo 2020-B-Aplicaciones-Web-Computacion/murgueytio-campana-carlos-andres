@@ -8,7 +8,8 @@ const FileStore = require('session-file-store')(session);
 var fileStoreOptions = {};
 
 async function bootstrap() {
-    const app = await NestFactory.create(AppModule);
+    const app: any = await NestFactory.create(AppModule);
+    app.set('view engine', 'ejs');
     app.use(session({
         store: new FileStore(fileStoreOptions), //indica donde se van a guardar los datos de la sesion
         secret: 'keyboard cat',
@@ -20,6 +21,7 @@ async function bootstrap() {
     }));
     app.use(cookieParser());
     app.use(helmet());
+
     await app.listen(3000);
 }
 

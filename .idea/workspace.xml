@@ -5,8 +5,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clases/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/clases/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clases/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/clases/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/app.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clases/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/src/mascota/mascota.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/mascota/mascota.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/src/mascota/mascota.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/mascota/mascota.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/src/usuario/usuario.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/usuario/usuario.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/src/usuario/usuario.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/usuario/usuario.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -24,6 +29,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1nsxim9yr1xaDAN485z3MD1bhNa" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -54,7 +62,9 @@
       <workItem from="1614176420462" duration="10619000" />
       <workItem from="1614481430500" duration="116000" />
       <workItem from="1614608074317" duration="998000" />
-      <workItem from="1614609530814" duration="4351000" />
+      <workItem from="1614609530814" duration="4373000" />
+      <workItem from="1614697480658" duration="3324000" />
+      <workItem from="1614780191693" duration="6427000" />
     </task>
     <servers />
   </component>

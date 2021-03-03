@@ -3,9 +3,26 @@ import {AppController} from './app.controller';
 import {AppService} from './app.service';
 import {UsuarioModule} from './usuario/usuario.module';
 import {MascotaModule} from './mascota/mascota.module'
+import {TypeOrmModule} from "@nestjs/typeorm";
+import {UsuarioEntity} from "./usuario/usuario.entity";
+import {MascotaEntity} from "./mascota/mascota.entity";
 
 @Module({
     imports: [
+        TypeOrmModule.forRoot({
+            name: 'default',
+            type: 'mysql',
+            port: 3010,
+            username: 'epn',
+            password: 'epn12345678',
+            database: 'web',
+            dropSchema: false, //elimina toda la base de datos
+            synchronize: true, //Crea y modifica las tablas
+            entities: [
+                UsuarioEntity,
+                MascotaEntity,
+            ]
+        }),
         MascotaModule,
         UsuarioModule
     ],
