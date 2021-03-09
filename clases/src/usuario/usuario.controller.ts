@@ -12,15 +12,25 @@ export class UsuarioController {
     ) {
     }
 
-    @Post('')
-    crearUsuario(
+    @Get('crear-usuario')
+    crearUsuarioVista(
+        @Res() response,
+    ){
+        response.render('usuarios/crear');
+    }
+
+
+    @Post('crear-usuario')
+    async crearUsuario(
         @Body()
-            parametrosCuerpo
+            parametrosCuerpo,
+        @Res() response
     ) {
-        return this._usuarioService.usuarioEntity.save({
+        const respuesta = await this._usuarioService.usuarioEntity.save({
             nombre: parametrosCuerpo.nombre,
             apellido: parametrosCuerpo.apellido
         });
+        response.redirect('/usuario/usuarios?mensaje=Se creó el usuario ' + parametrosCuerpo.nombre)
     }
 
     @Get('usuarios')
@@ -30,7 +40,7 @@ export class UsuarioController {
         @Res()
             response,
     ) {
-        let take = 10; //Dame 10 registros
+        let take = 100; //Dame 10 registros
         let skip = 0; //Me salto 0 registros
         let order = 'ASC';
         if (parametrosConsulta.skip) {
@@ -74,7 +84,8 @@ export class UsuarioController {
 
         let datos = await this._usuarioService.usuarioEntity.findAndCount(consulta);
         response.render('inicio', {
-            datos: datos
+            datos: datos,
+            parametrosConsulta: parametrosConsulta,
         });
     }
 

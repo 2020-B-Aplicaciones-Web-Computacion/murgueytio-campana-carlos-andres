@@ -1,4 +1,5 @@
-import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
+import {Column, Entity, ManyToOne, PrimaryGeneratedColumn} from "typeorm";
+import {UsuarioEntity} from "../usuario/usuario.entity";
 
 @Entity('EPN_MASCOTA')
 export class MascotaEntity {
@@ -6,5 +7,9 @@ export class MascotaEntity {
     id: number
     @Column()
     nombre: string
+
+    @ManyToOne( type=> UsuarioEntity,
+        usuario => usuario.mascotas)
+        fkUsuario;
 
 }

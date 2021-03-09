@@ -3,14 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="254d6463-fb7f-442e-8fd5-5aebc7b1d0fe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/clases/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/clases/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clases/src/mascota/mascota.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/mascota/mascota.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/src/mascota/mascota.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/mascota/mascota.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/src/mascota/mascota.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/mascota/mascota.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/src/mascota/mascota.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/mascota/mascota.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clases/src/usuario/usuario.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/usuario/usuario.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/src/usuario/usuario.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/usuario/usuario.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/src/usuario/usuario.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/usuario/usuario.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/views/inicio.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/clases/views/inicio.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +43,11 @@
     <property name="ts.external.directory.path" value="C:\Users\Reyum\OneDrive\Documentos\POLIARCHIVOS\Septimo_Semestre\Web\Segundo Bimestre\RepoGit\murgueytio-campana-carlos-andres\clases\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Reyum\OneDrive\Documentos\POLIARCHIVOS\Septimo_Semestre\Web\Segundo Bimestre\RepoGit\murgueytio-campana-carlos-andres\clases\views\usuarios" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -64,7 +67,8 @@
       <workItem from="1614608074317" duration="998000" />
       <workItem from="1614609530814" duration="4373000" />
       <workItem from="1614697480658" duration="3324000" />
-      <workItem from="1614780191693" duration="6427000" />
+      <workItem from="1614780191693" duration="6547000" />
+      <workItem from="1615299297972" duration="6275000" />
     </task>
     <servers />
   </component>
