@@ -6,6 +6,7 @@ import {MascotaModule} from './mascota/mascota.module'
 import {TypeOrmModule} from "@nestjs/typeorm";
 import {UsuarioEntity} from "./usuario/usuario.entity";
 import {MascotaEntity} from "./mascota/mascota.entity";
+import {CalculadoraModule} from "./calculadora/calculadora.module";
 
 @Module({
     imports: [
@@ -24,7 +25,8 @@ import {MascotaEntity} from "./mascota/mascota.entity";
             ]
         }),
         MascotaModule,
-        UsuarioModule
+        UsuarioModule,
+        CalculadoraModule
     ],
     controllers: [AppController],
     providers: [AppService],

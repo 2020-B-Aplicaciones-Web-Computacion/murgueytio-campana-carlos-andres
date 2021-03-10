@@ -16,7 +16,8 @@ async function bootstrap() {
         resave: true,
         saveUninitialized: true,
         cookie: {
-            expires: new Date(Date.now() + (30 * 8600 * 100)) //
+            expires: new Date(Date.now() + (30 * 8600 * 100)),//
+
         }
     }));
     app.use(cookieParser());

@@ -40,7 +40,7 @@ export class UsuarioController {
         @Res()
             response,
     ) {
-        let take = 100; //Dame 10 registros
+        let take = 10; //Dame 10 registros
         let skip = 0; //Me salto 0 registros
         let order = 'ASC';
         if (parametrosConsulta.skip) {
@@ -147,70 +147,10 @@ export class UsuarioController {
 
     }
 
-    @Get('suma/') //Suma con get y query params
-    @HttpCode(200)
-    sumar(
-        @Query()
-            query,
-        @Req()
-            request,
-        @Res({passthrough: true})
-            response,
-    ) {
-        console.log(query);
-        var resultado;
-        let valores: number;
-        //valores = Object.values(query); // ['1', '2']
-        //resultado = valores[0] + valores[1];
-        //resultado = (parseInt(valores[0]) + parseInt(parametrosQuery.numDos));
-        return 'El valor de la suma es igual a : ' + resultado;
 
-    }
 
-    @Post('resta/:numeroUno/:numeroDos') //Resta con post y body params
-    @HttpCode(201)
-    @Header('Resultado', 'valor')
-    restar(
-        @Param() parametrosRuta,
-        @Res({passthrough: true})
-            response,
-        @Headers() headers,
-    ) {
 
-        var resta: number = 0;
-        resta = (parseInt(parametrosRuta.numeroUno) - parseInt(parametrosRuta.numeroDos));
-        response.header('Resultado', resta);
-        return 'El valor de la resta es igual a : ' + resta;
-    }
 
-    @Put('multiplicar/:numeroUno/:numeroDos')
-    @HttpCode(200)
-    multiplicar(
-        @Param() parametrosRuta,
-        @Res({passthrough: true})
-            response,
-    ) {
-        var resultado: number = 0;
-        resultado = (parseInt(parametrosRuta.numeroUno) * parseInt(parametrosRuta.numeroDos));
-        return 'El valor de la multiplicación es igual a : ' + resultado;
-    }
-
-    @Get('dividir') //Con get y headers
-    @HttpCode(201)
-    @Header('numeroUno', 'none')
-    @Header('numeroDos', 'none')
-    dividir(
-        @Res({passthrough: true})
-            response,
-        @Headers() headers,
-    ) {
-        //console.log(headers);
-        var resultado: number = 0;
-        //resultado = (parseInt(parametrosRuta.numeroUno) * parseInt(parametrosRuta.numeroDos));
-        console.log(headers.getValue(0));
-        return 'El valor de la división es igual a : ' + resultado;
-
-    }
 
 
 }
