@@ -8,7 +8,7 @@ import {MascotaEntity} from "./mascota.entity";
 export class MascotaService {
     constructor(
         @InjectRepository(MascotaEntity)
-        public mascotaEntity: Repository<UsuarioEntity>
+        public mascotaEntity: Repository<MascotaEntity>
     ) { //Inyectar dependencias
 
 

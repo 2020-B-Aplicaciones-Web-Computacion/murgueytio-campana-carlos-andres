@@ -7,6 +7,10 @@ import {TypeOrmModule} from "@nestjs/typeorm";
 import {UsuarioEntity} from "./usuario/usuario.entity";
 import {MascotaEntity} from "./mascota/mascota.entity";
 import {CalculadoraModule} from "./calculadora/calculadora.module";
+import {DesarrolladoraEntity} from "./desarrolladora/desarrolladora.entity";
+import {VideojuegosEntity} from "./videojuegos/videojuegos.entity";
+import {DesarrolladoraModule} from "./desarrolladora/desarrolladora.module";
+import {VideojuegosModule} from "./videojuegos/videojuegos.module";
 
 @Module({
     imports: [
@@ -22,11 +26,15 @@ import {CalculadoraModule} from "./calculadora/calculadora.module";
             entities: [
                 UsuarioEntity,
                 MascotaEntity,
+                DesarrolladoraEntity,
+                VideojuegosEntity
             ]
         }),
         MascotaModule,
         UsuarioModule,
-        CalculadoraModule
+        CalculadoraModule,
+        DesarrolladoraModule,
+        VideojuegosModule
     ],
     controllers: [AppController],
     providers: [AppService],

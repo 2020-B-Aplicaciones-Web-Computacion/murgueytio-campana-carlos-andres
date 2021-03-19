@@ -1,36 +1,36 @@
 <% const arreglo = [1, 2, 3, 4, 5] %>
 <% const nombre = 'Carlos' %>
 <% const numero = 1 + 10 %>
-<h1><%= nombre %>-<%= numero %></h1>
+<h1><%= nombre %>-<%= numero %></h1>  <!--El igual después del % es para mostrar los datos-->
 <ul>
-    <% for (let numero of arreglo) %>
-    <li>Numero: <%= numero %></li>
+    <% for (let numero of arreglo) { %>
+        <li>Numero: <%= numero %></li>
+    <% } %>
 </ul>
 
 <style>
-    .mensaje{
+    .mensaje {
         border: solid 1px #c3a062;
         width: 100%;
-        margin:10px;
+        margin: 10px;
     }
 </style>
 
-<% if(parametrosConsulta.mensaje){%>
+<% if(parametrosConsulta.mensaje){ %>
     <div class="mensaje">
-        <%=  parametrosConsulta.mensaje %>
+        <%= parametrosConsulta.mensaje %>
     </div>
 
-<%}%>
+<% } %>
 
 
 <a href="/usuario/crear-usuario">
-    <button> CREAR </button>
+    <button> CREAR</button>
 </a>
 
 
-
-<form action ="/usuario/usuarios" method="get">
-    <label for ="busqueda">Búsqueda</label>
+<form action="/usuario/usuarios" method="get">
+    <label for="busqueda">Búsqueda</label>
     <input id="busqueda" type="text" name="busqueda">
     <button type="submit">
         Buscar

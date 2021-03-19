@@ -1,6 +1,5 @@
 import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from 'typeorm';
 import {MascotaEntity} from "../mascota/mascota.entity";
-import {type} from "os";
 
 @Entity('EPN_USUARIO')
 export class UsuarioEntity {

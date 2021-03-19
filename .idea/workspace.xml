@@ -3,16 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="254d6463-fb7f-442e-8fd5-5aebc7b1d0fe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/sessions/AkWZ6yRhlpiIlDY9vWa1uoEE2dNWzIWJ.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/sessions/Etv4JdqDU6rh8LVrWNpSVlDys4LSSe-4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/sessions/doaVkwWS2D-MtkHXbr6HoZTRZ12TtB-B.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/sessions/mFbjmy7Mv0RFofHtIqaiF8J7hvvceo62.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/sessions/nakfC7fh8ETQDFL6DENmOfed1-B8x_JH.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/sessions/pMrjhTJxGjqgEvIUWJUOsT0CKRyusX_R.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/sessions/xvL7twU_6o9LYhjfphhpBd_PAwIzjgKv.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/clases/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/clases/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/sessions/U05ZYVLuiWIRN9Xv-5tXjiVREVloNMGn.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/app.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clases/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/src/usuario/usuario.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/usuario/usuario.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/src/mascota/mascota.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/mascota/mascota.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/src/mascota/mascota.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/mascota/mascota.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/src/usuario/usuario.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/usuario/usuario.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/views/inicio.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/clases/views/inicio.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/views/usuarios/crear.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/clases/views/usuarios/crear.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,13 +22,21 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1nsxim9yr1xaDAN485z3MD1bhNa" />
   <component name="ProjectLevelVcsManager">
@@ -74,6 +82,9 @@
       <workItem from="1614780191693" duration="6547000" />
       <workItem from="1615299297972" duration="6275000" />
       <workItem from="1615319150203" duration="19850000" />
+      <workItem from="1615817711495" duration="3087000" />
+      <workItem from="1615904229972" duration="1679000" />
+      <workItem from="1616104826742" duration="26004000" />
     </task>
     <servers />
   </component>
@@ -91,5 +102,17 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/clases/src/desarrolladora/desarrolladora.controller.ts</url>
+          <line>41</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

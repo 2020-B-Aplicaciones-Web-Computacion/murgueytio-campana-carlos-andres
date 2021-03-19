@@ -6,13 +6,13 @@ export class MascotaController{
     constructor(private _mascotaService: MascotaService){
 
     }
-    @Post('crear-mascota')
+    @Post('')
     async crearMascotaREST(
         @Body() parametrosCuerpo,
     ){
-        await this._mascotaService.mascotaEntity.save({
+        return await this._mascotaService.mascotaEntity.save({
             nombre: parametrosCuerpo.nombre,
-            fkUsuario : 1,
+            fkUsuario : parametrosCuerpo.fkUsuario,
         })
 
     }

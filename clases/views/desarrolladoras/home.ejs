@@ -1,0 +1,62 @@
+<% const arreglo = [1, 2, 3, 4, 5] %>
+<% const nombre = 'Carlos' %>
+<% const numero = 1 + 10 %>
+<h1><%= nombre %>-<%= numero %></h1>  <!--El igual después del % es para mostrar los datos-->
+<ul>
+    <% for (let numero of arreglo) { %>
+        <li>Numero: <%= numero %></li>
+    <% } %>
+</ul>
+
+<style>
+    .mensaje {
+        border: solid 1px #c3a062;
+        width: 100%;
+        margin: 10px;
+    }
+</style>
+
+<% if(parametrosConsulta.mensaje){ %>
+    <div class="mensaje">
+        <%= parametrosConsulta.mensaje %>
+    </div>
+
+<% } %>
+<a href="/desarrolladora/crear-dev">
+    <button>Agregar una desarrolladora</button>
+</a>
+
+
+<form action="/desarrolladora/desarrolladoras" method="get">
+    <label for="busqueda">Búsqueda: </label>
+    <input id="busqueda" type="text" nombre="busqueda">
+    <button type="submit">
+        Buscar
+    </button>
+</form>
+
+<table id="myTable">
+    <tr>
+        <th>ID Desarrolladora:</th>
+        <th>Nombre desarrolladora:</th>
+        <th>Año de fundación:</th>
+        <th>Acciones</th>
+    </tr>
+    <% for (let desarrolladora of datos[0]){ %>
+        <tr>
+            <td><%= desarrolladora.idDev %></td>
+            <td><%= desarrolladora.nombreDev %></td>
+            <td><%= desarrolladora.anioDev %></td>
+            <td>
+                <button>Editar Registro</button>
+                <a href="/desarrolladora/borrar-dev">
+                    <button>Eliminar Registro</button>
+                </a>
+            </td>
+        </tr>
+
+    <% } %>
+</table>
+<p>Número total de registros: <%= datos[1] %></p>
+
+

@@ -1,9 +1,46 @@
-import {BadRequestException, Controller, ForbiddenException, Get, Param, Query, Req, Session} from '@nestjs/common';
+import {
+    BadRequestException, Body,
+    Controller,
+    ForbiddenException,
+    Get,
+    Param,
+    Post,
+    Query,
+    Req,
+    Session
+} from '@nestjs/common';
 import {AppService} from './app.service';
+import {FormularioCrearDto} from "./dto/formulario-crear.dto";
+import {validate} from "class-validator";
 
 @Controller()
 export class AppController {
     constructor(private readonly appService: AppService) {
+    }
+
+    @Post('validacion-Formulario')
+    async validacionFormulario(
+        @Body() parametrosCuerpo,
+    ) {
+        const dtoFormulario = new FormularioCrearDto();
+
+        dtoFormulario.nombre = parametrosCuerpo.nombre;
+        dtoFormulario.cedula = parametrosCuerpo.cedula;
+        dtoFormulario.correo = parametrosCuerpo.correo;
+        dtoFormulario.edad = parametrosCuerpo.edad;
+        dtoFormulario.soltero = parametrosCuerpo.soltero;
+
+        const errores = await validate(dtoFormulario);
+        if (errores.length > 0) {
+            console.error(JSON.stringify(errores));
+            console.error(errores.toString());
+            throw new BadRequestException('No envia correctamente los parametros');
+        } else {
+            //Llamar al servicio y crear el registro y responder
+            return 'ok';
+        }
+
+
     }
 
     @Get()
@@ -68,6 +105,8 @@ export class AppController {
         }
 
     }
+
+
 }
 
 
