@@ -3,16 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="254d6463-fb7f-442e-8fd5-5aebc7b1d0fe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/clases/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/clases/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/sessions/U05ZYVLuiWIRN9Xv-5tXjiVREVloNMGn.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/app.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/src/mascota/mascota.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/mascota/mascota.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/src/mascota/mascota.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/mascota/mascota.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/src/usuario/usuario.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/usuario/usuario.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/views/inicio.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/clases/views/inicio.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/views/usuarios/crear.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/clases/views/usuarios/crear.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/sessions/NwrEtWbKz-7Lf8Mk0vDF5aECXtbCMiFv.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/sessions/SR0s1vEo7zZm9s4aYrLsvXLEjYIW95tr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/src/desarrolladora/desarrolladora.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/desarrolladora/desarrolladora.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/src/desarrolladora/desarrolladora.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/desarrolladora/desarrolladora.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/src/videojuegos/videojuegos.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/videojuegos/videojuegos.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/src/videojuegos/videojuegos.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/videojuegos/videojuegos.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/views/desarrolladoras/creardev.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/clases/views/desarrolladoras/creardev.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/views/desarrolladoras/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/clases/views/desarrolladoras/home.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +55,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Reyum\OneDrive\Documentos\POLIARCHIVOS\Septimo_Semestre\Web\Segundo Bimestre\RepoGit\murgueytio-campana-carlos-andres\clases\views\videojuegos" />
       <recent name="C:\Users\Reyum\OneDrive\Documentos\POLIARCHIVOS\Septimo_Semestre\Web\Segundo Bimestre\RepoGit\murgueytio-campana-carlos-andres\clases\views\usuarios" />
     </key>
   </component>
@@ -85,6 +84,9 @@
       <workItem from="1615817711495" duration="3087000" />
       <workItem from="1615904229972" duration="1679000" />
       <workItem from="1616104826742" duration="26004000" />
+      <workItem from="1616179585718" duration="8722000" />
+      <workItem from="1616195669417" duration="24870000" />
+      <workItem from="1616250141407" duration="2126000" />
     </task>
     <servers />
   </component>
@@ -102,17 +104,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/clases/src/desarrolladora/desarrolladora.controller.ts</url>
-          <line>41</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

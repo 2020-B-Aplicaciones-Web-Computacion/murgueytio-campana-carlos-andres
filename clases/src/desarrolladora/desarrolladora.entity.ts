@@ -3,13 +3,13 @@ import {VideojuegosEntity} from "../videojuegos/videojuegos.entity";
 import {MascotaEntity} from "../mascota/mascota.entity";
 
 @Entity('Desarrolladora')
-export class DesarrolladoraEntity{
+export class DesarrolladoraEntity {
     @PrimaryGeneratedColumn()
     idDev: number
     @Column({
         type: 'varchar',
         length: 100,
-        nullable:false,
+        nullable: false,
         name: 'nombreDesarrolladora'
     })
     nombreDev: string
@@ -22,7 +22,8 @@ export class DesarrolladoraEntity{
     })
     anioDev: string
 
-
-    @OneToMany( type => VideojuegosEntity, videojuego=>videojuego.fkDesarrolladora)
+    @OneToMany(type => VideojuegosEntity,
+        videojuego => videojuego.fkDev,
+        {onDelete: 'CASCADE'})
     videojuegos: VideojuegosEntity[];
 }

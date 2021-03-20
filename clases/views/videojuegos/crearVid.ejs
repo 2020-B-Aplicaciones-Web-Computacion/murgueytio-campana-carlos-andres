@@ -1,0 +1,85 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar un videojuego</title>
+    <style>
+        table {
+            align-self: center;
+            width: 90%;
+            border: 1px solid #000;
+            margin-left: 30px;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        th,
+        td {
+            width: 25%;
+            text-align: center;
+            vertical-align: top;
+            border: 1px solid #000;
+            border-collapse: collapse;
+            padding: 0.3em;
+            caption-side: bottom;
+            background: rgb(200, 229, 224);
+        }
+
+        input {
+            text-align: center;
+        }
+
+        body {
+            background-color: rgb(247, 238, 245);
+        }
+    </style>
+</head>
+<body>
+<h1 style="text-align: center">AGREGAR UN VIDEOJUEGO</h1>
+<div>
+    <form action="/videojuegos/crear-vid" method="post">
+        <table>
+            <caption>Información del videojuego</caption>
+            <tr>
+                <th>Nombre Videojuego</th>
+                <th>Año de lanzamiento</th>
+                <th>Consola</th>
+                <th>Género</th>
+                <th>Foreign Key</th>
+            </tr>
+            <tr>
+                <td>
+                    <label hidden="true" for="nombre"></label>
+                    <input id="nombre" type="text" name="nombre">
+                </td>
+                <td>
+                    <label hidden="true" for="anioVideojuego"></label>
+                    <input id="anioVideojuego" type="text" name="anioVideojuego">
+                </td>
+                <td>
+                    <label hidden="true" for="consola"></label>
+                    <input id="consola" type="text" name="consola">
+                </td>
+                <td>
+                    <label hidden="true" for="genero"></label>
+                    <input id="genero" type="text" name="genero">
+                </td>
+                <td>
+                    <label hidden="true" for="idDev"></label>
+                    <input id="idDev" type="idDev" name="idDev" value='<%= parametrosCuerpo.idDev %>' readonly>
+                </td>
+            </tr>
+        </table>
+        <br><br>
+        <div style="alignment: center;text-align: center">
+            <% const path = '/videojuegos/videojuegos?idDev=' + parametrosCuerpo.idDev %>
+            <a href="<%= path %>" method="get">
+                <button type="submit">Crear</button>
+            </a>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,62 +1,109 @@
-<% const arreglo = [1, 2, 3, 4, 5] %>
-<% const nombre = 'Carlos' %>
-<% const numero = 1 + 10 %>
-<h1><%= nombre %>-<%= numero %></h1>  <!--El igual después del % es para mostrar los datos-->
-<ul>
-    <% for (let numero of arreglo) { %>
-        <li>Numero: <%= numero %></li>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrolladoras de Videojuegos</title>
+    <style>
+        .mensaje {
+            border: solid 1px #c3a062;
+            width: fit-content;
+            margin: 10px;
+        }
+
+        h1{
+            width: 100%;
+            text-align: center;
+        }
+
+        table {
+            align-self: center;
+            width: 90%;
+            border: 1px solid #000;
+            margin-left: 30px;
+            margin-right: auto;
+            margin-top: auto ;
+            margin-bottom: auto;
+        }
+
+        th,
+        td {
+            width: 25%;
+            text-align: center;
+            vertical-align: top;
+            border: 1px solid #000;
+            border-collapse: collapse;
+            padding: 0.3em;
+            caption-side: bottom;
+            background: rgb(200, 229, 224);
+        }
+
+        caption {
+            padding: 0.3em;
+            color: #fff;
+            background: #000;
+        }
+        body{
+            background-color: rgb(247, 238,245);
+        }
+    </style>
+</head>
+
+<body>
+<h1>Bienvenido a la página de desarrolladoras de videojuegos</h1>
+<div style="margin-left: 30px">
+    <form action="/desarrolladora/desarrolladoras" method="get">
+        <label for="busqueda">Búsqueda</label>
+        <input id="busqueda" type="text" name="busqueda">
+        <button type="submit">
+            Buscar
+        </button>
+    </form>
+</div>
+
+<div>
+    <% if(parametrosConsulta.mensaje){ %>
+        <div class="mensaje" style="margin-left: 30px">
+            <i><%= parametrosConsulta.mensaje %> </i>
+        </div>
+
     <% } %>
-</ul>
-
-<style>
-    .mensaje {
-        border: solid 1px #c3a062;
-        width: 100%;
-        margin: 10px;
-    }
-</style>
-
-<% if(parametrosConsulta.mensaje){ %>
-    <div class="mensaje">
-        <%= parametrosConsulta.mensaje %>
-    </div>
-
-<% } %>
-<a href="/desarrolladora/crear-dev">
-    <button>Agregar una desarrolladora</button>
-</a>
-
-
-<form action="/desarrolladora/desarrolladoras" method="get">
-    <label for="busqueda">Búsqueda: </label>
-    <input id="busqueda" type="text" nombre="busqueda">
-    <button type="submit">
-        Buscar
-    </button>
-</form>
-
-<table id="myTable">
-    <tr>
-        <th>ID Desarrolladora:</th>
-        <th>Nombre desarrolladora:</th>
-        <th>Año de fundación:</th>
-        <th>Acciones</th>
-    </tr>
-    <% for (let desarrolladora of datos[0]){ %>
+    <a href="/desarrolladora/crear-dev" style="margin-left: 30px">
+        <button>Agregar una desarrolladora</button>
+    </a>
+    <br><br>
+    <table id="myTable">
+        <caption>Lista de desarrolladoras</caption>
         <tr>
-            <td><%= desarrolladora.idDev %></td>
-            <td><%= desarrolladora.nombreDev %></td>
-            <td><%= desarrolladora.anioDev %></td>
-            <td>
-                <button>Editar Registro</button>
-                <a href="/desarrolladora/borrar-dev">
-                    <button>Eliminar Registro</button>
-                </a>
-            </td>
+            <th>ID Desarrolladora:</th>
+            <th>Nombre desarrolladora:</th>
+            <th>Año de fundación:</th>
+            <th>Acciones</th>
         </tr>
+        <% for (let desarrolladora of datos[0]){ %>
+            <tr>
+                <% const idDev = '/desarrolladora/borrar-dev?idDev=' + desarrolladora.idDev %>
+                <% const idMod = '/desarrolladora/modificar-dev?idDev=' + desarrolladora.idDev + '&nombreDev=' + desarrolladora.nombreDev + '&anioDev=' + desarrolladora.anioDev %>
+                <% const videojuegos = 'http://localhost:3000/videojuegos/videojuegos?idDev='+desarrolladora.idDev%>
+                <td><%= desarrolladora.idDev %></td>
+                <td><%= desarrolladora.nombreDev %></td>
+                <td><%= desarrolladora.anioDev %></td>
+                <td>
+                    <a href="<%= idMod %>">
+                        <button>Editar Registro</button>
+                    </a>
+                    <a href="<%= idDev %>">
+                        <button>Eliminar Registro</button>
+                    </a>
+                    <a href="<%= videojuegos %>">
+                        <button>Videojuegos</button>
+                    </a>
+                </td>
+            </tr>
 
-    <% } %>
-</table>
-<p>Número total de registros: <%= datos[1] %></p>
+        <% } %>
+    </table>
+    <p style="margin-left:30px">Número total de registros: <%= datos[1] %></p>
+</div>
 
-
+</body>
+</html>

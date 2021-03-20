@@ -1,5 +1,4 @@
 import {Column, Entity, ManyToOne, PrimaryGeneratedColumn} from "typeorm";
-import {UsuarioEntity} from "../usuario/usuario.entity";
 import {DesarrolladoraEntity} from "../desarrolladora/desarrolladora.entity";
 
 @Entity('Videojuego')
@@ -39,6 +38,7 @@ export class VideojuegosEntity {
     genero: string
 
     @ManyToOne(type => DesarrolladoraEntity,
-        desarrolladora => desarrolladora.videojuegos)
-    fkDesarrolladora;
+        desarrolladora => desarrolladora.videojuegos,
+        {onDelete: 'CASCADE'})
+    fkDev: number;
 }

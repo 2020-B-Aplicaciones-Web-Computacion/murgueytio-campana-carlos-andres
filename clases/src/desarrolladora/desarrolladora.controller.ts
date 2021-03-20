@@ -2,7 +2,6 @@ import {Body, Controller, Get, Post, Query, Res} from "@nestjs/common";
 import {DesarrolladoraService} from "./desarrolladora.service";
 import {FindConditions, FindManyOptions, Like} from "typeorm";
 import {DesarrolladoraEntity} from "./desarrolladora.entity";
-import {UsuarioEntity} from "../usuario/usuario.entity";
 
 @Controller('desarrolladora')
 export class DesarrolladoraController {
@@ -32,7 +31,6 @@ export class DesarrolladoraController {
         response.redirect('/desarrolladora/desarrolladoras?mensaje=Se creó la nueva desarrolladora: ' + parametrosCuerpo.nombreDev + ' con su respectivo año: ' + parametrosCuerpo.anioDev);
     }
 
-
     @Get('desarrolladoras')
     async obtenerDesarrolladora(
         @Query()
@@ -43,6 +41,13 @@ export class DesarrolladoraController {
         let take = 10;
         let skip = 0;
         let order = 'ASC';
+        if(parametrosConsulta.busqueda){
+            let porcent = '%';
+            let buscarFix1 = porcent.concat(parametrosConsulta.busqueda.toString());
+            const buscarFix = buscarFix1.concat(porcent);
+            //console.log(buscarFix);
+            parametrosConsulta.busqueda = buscarFix;
+        }
         if (parametrosConsulta.take) {
             take = parametrosConsulta.take;
         }
@@ -50,15 +55,8 @@ export class DesarrolladoraController {
             skip = parametrosConsulta.skip;
         }
         if (parametrosConsulta.order) {
-            order = parametrosConsulta.order as 'ASC' | 'DESC';
+            order = parametrosConsulta.order;
         }
-
-        let consultaWhereANd: FindConditions<DesarrolladoraEntity>[] = [
-            {
-                idDev: 2,
-                nombreDev: 'FromSoftware'
-            }
-        ];
 
         let consultaWhereOR: FindConditions<DesarrolladoraEntity>[] = [  //Si el arreglo solo tiene un objeto = AND, si tiene mas de uno= OR
             {
@@ -92,22 +90,36 @@ export class DesarrolladoraController {
     @Get('borrar-dev')
     async borrarDevView(
         @Res()
-            response
+            response,
+        @Query()
+            parametrosConsulta
     ) {
-        response.render('desarrolladoras/borrardev');
+        const respuesta = await this._desarrolladoraService.desarrolladoraEntity.delete(
+            parametrosConsulta.idDev);
+        response.redirect('/desarrolladora/desarrolladoras?mensaje=Se eliminó el registro satisfactoriamente');
     }
 
-    @Post('borrar-dev')
-    async borrarDev(
+    @Get('modificar-dev')
+    async modificarDev(
+        @Res()
+            response,
+        @Query()
+            parametrosConsulta
+    ) {
+        response.render('desarrolladoras/modificarDev', {parametrosConsulta: parametrosConsulta});
+    }
+
+    @Post('modificar-dev')
+    async modificarDevPost(
         @Body()
             parametrosCuerpo,
         @Res() response
     ) {
-        console.log(parametrosCuerpo);
-        const respuesta = await this._desarrolladoraService.desarrolladoraEntity.delete({
-            idDev: parametrosCuerpo.idDev
+        const respuesta = await this._desarrolladoraService.desarrolladoraEntity.update({idDev:parametrosCuerpo.idDev},{
+            nombreDev: parametrosCuerpo.nombreDev,
+            anioDev: parametrosCuerpo.anioDev
         });
-        response.redirect('/desarrolladora/desarrolladoras?mensaje=Se eliminó el registro de: ' + parametrosCuerpo.nombreDev);
+        response.redirect('/desarrolladora/desarrolladoras?mensaje=Se modificó la desarrolladora: ' + parametrosCuerpo.nombreDev + ' con su respectivo año: ' + parametrosCuerpo.anioDev);
     }
 
 }
