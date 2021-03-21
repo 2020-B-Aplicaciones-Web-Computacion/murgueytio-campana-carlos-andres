@@ -46,6 +46,22 @@
         body {
             background-color: rgb(247, 238, 245);
         }
+
+        ul.pagination {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul.pagination li {
+            display: inline;
+        }
+
+        ul.pagination li a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+        }
     </style>
 </head>
 
@@ -98,8 +114,8 @@
         <% for (let videojuegos of datos[0]){ %>
             <tr>
                 <td><%= videojuegos.idVid %></td>
-                <% const idVid = '/videojuegos/borrar-vid?idVid=' + videojuegos.idVid %>
-                <% const idMod = '/videojuegos/modificar-vid?idVid=' + videojuegos.idVid + '&nombre=' + videojuegos.nombre + '&anioVideojuego=' + videojuegos.anioVideojuego + '&consola=' + videojuegos.consola + '&genero=' + videojuegos.genero + '&fkDev=' + parametrosConsulta.idDev %>
+                <% const idVid = '/videojuegos/borrar-vid?idVid=' + videojuegos.idVid +'&idDev='+parametrosConsulta.idDev%>
+                <% const idMod = '/videojuegos/modificar-vid?idVid=' + videojuegos.idVid + '&nombre=' + videojuegos.nombre + '&anioVideojuego=' + videojuegos.anioVideojuego + '&consola=' + videojuegos.consola + '&genero=' + videojuegos.genero + '&fkDev=' + parametrosConsulta.idDev +'&idDev='+parametrosConsulta.idDev %>
                 <td><%= videojuegos.nombre %></td>
                 <td><%= videojuegos.anioVideojuego %></td>
                 <td><%= videojuegos.consola %></td>
@@ -118,6 +134,34 @@
         <% } %>
     </table>
     <p style="margin-left:30px">Número total de registros: <%= datos[1] %></p>
+</div>
+
+<div>
+    <%let pagina= 0;%>
+    <%let paginaAnterior= 0;%>
+    <%let paginaSiguiente= 0;%>
+    <% if(parametrosConsulta.pag){ %>
+    <%pagina = parametrosConsulta.pag%>
+    <% if(parseInt(pagina) >= 2){%>
+    <%paginaAnterior = parseInt(pagina) - 1%>
+    <%} else{%>
+    <%paginaAnterior = 1%>
+    <%}%>
+    <%paginaSiguiente = parseInt(pagina) + 1%>
+    <% } %>
+
+    <ul class="pagination">
+        <%let direccionAnterior = '/videojuegos/videojuegos?pag='+paginaAnterior+'&idDev='+parametrosConsulta.idDev%>
+        <%let direccionSiguiente = '/videojuegos/videojuegos?pag='+paginaSiguiente+'&idDev='+parametrosConsulta.idDev%>
+        <%let direccion1 = '/videojuegos/videojuegos?pag=1&idDev='+parametrosConsulta.idDev%>
+        <%let direccion2 = '/videojuegos/videojuegos?pag=2&idDev='+parametrosConsulta.idDev%>
+        <%let direccion3 = '/videojuegos/videojuegos?pag=3&idDev='+parametrosConsulta.idDev%>
+        <li><a href="<%= direccionAnterior%>">«</a></li>
+        <li><a href="<%= direccion1%>">1</a></li>
+        <li><a href="<%= direccion2%>">2</a></li>
+        <li><a href="<%= direccion3%>">3</a></li>
+        <li><a href="<%= direccionSiguiente%>">»</a></li>
+    </ul>
 </div>
 
 </body>

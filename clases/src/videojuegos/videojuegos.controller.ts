@@ -64,6 +64,11 @@ export class VideojuegosController {
         if (parametrosConsulta.order) {
             order = parametrosConsulta.order;
         }
+        if(parametrosConsulta.pag){
+            if(parametrosConsulta.pag>1){
+                skip = (parseInt(parametrosConsulta.pag)* 10)-10;
+            }
+        }
         let consultaWhereOR: FindConditions<VideojuegosEntity>[] = [  //Si el arreglo solo tiene un objeto = AND, si tiene mas de uno= OR
             {
                 fkDev: Like(parametrosConsulta.idDev ? parametrosConsulta.idDev : '%%'),
@@ -88,6 +93,7 @@ export class VideojuegosController {
             datos: datos,
             parametrosConsulta: parametrosConsulta
         });
+
     }
 
     @Get('borrar-vid')

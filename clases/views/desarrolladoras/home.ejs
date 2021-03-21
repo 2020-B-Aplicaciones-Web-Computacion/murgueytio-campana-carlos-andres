@@ -10,7 +10,7 @@
             margin: 10px;
         }
 
-        h1{
+        h1 {
             width: 100%;
             text-align: center;
         }
@@ -21,7 +21,7 @@
             border: 1px solid #000;
             margin-left: 30px;
             margin-right: auto;
-            margin-top: auto ;
+            margin-top: auto;
             margin-bottom: auto;
         }
 
@@ -42,9 +42,27 @@
             color: #fff;
             background: #000;
         }
-        body{
-            background-color: rgb(247, 238,245);
+
+        body {
+            background-color: rgb(247, 238, 245);
         }
+
+        ul.pagination {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul.pagination li {
+            display: inline;
+        }
+
+        ul.pagination li a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+        }
+
     </style>
 </head>
 
@@ -83,7 +101,7 @@
             <tr>
                 <% const idDev = '/desarrolladora/borrar-dev?idDev=' + desarrolladora.idDev %>
                 <% const idMod = '/desarrolladora/modificar-dev?idDev=' + desarrolladora.idDev + '&nombreDev=' + desarrolladora.nombreDev + '&anioDev=' + desarrolladora.anioDev %>
-                <% const videojuegos = 'http://localhost:3000/videojuegos/videojuegos?idDev='+desarrolladora.idDev%>
+                <% const videojuegos = 'http://localhost:3000/videojuegos/videojuegos?idDev=' + desarrolladora.idDev %>
                 <td><%= desarrolladora.idDev %></td>
                 <td><%= desarrolladora.nombreDev %></td>
                 <td><%= desarrolladora.anioDev %></td>
@@ -103,6 +121,33 @@
         <% } %>
     </table>
     <p style="margin-left:30px">Número total de registros: <%= datos[1] %></p>
+</div>
+<div>
+    <%let pagina= 0;%>
+    <%let paginaAnterior= 0;%>
+    <%let paginaSiguiente= 0;%>
+    <% if(parametrosConsulta.pag){ %>
+        <%pagina = parametrosConsulta.pag%>
+        <% if(parseInt(pagina) >= 2){%>
+            <%paginaAnterior = parseInt(pagina) - 1%>
+        <%} else{%>
+            <%paginaAnterior = 1%>
+        <%}%>
+        <%paginaSiguiente = parseInt(pagina) + 1%>
+    <% } %>
+
+    <ul class="pagination">
+        <%let direccionAnterior = '/desarrolladora/desarrolladoras?pag='+paginaAnterior%>
+        <%let direccionSiguiente = '/desarrolladora/desarrolladoras?pag='+paginaSiguiente%>
+        <%let direccion1 = '/desarrolladora/desarrolladoras?pag=1'%>
+        <%let direccion2 = '/desarrolladora/desarrolladoras?pag=2'%>
+        <%let direccion3 = '/desarrolladora/desarrolladoras?pag=3'%>
+        <li><a href="<%= direccionAnterior%>">«</a></li>
+        <li><a href="<%= direccion1%>">1</a></li>
+        <li><a href="<%= direccion2%>">2</a></li>
+        <li><a href="<%= direccion3%>">3</a></li>
+        <li><a href="<%= direccionSiguiente%>">»</a></li>
+    </ul>
 </div>
 
 </body>
