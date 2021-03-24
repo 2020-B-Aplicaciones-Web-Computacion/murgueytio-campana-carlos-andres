@@ -1,6 +1,5 @@
 import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from "typeorm";
 import {VideojuegosEntity} from "../videojuegos/videojuegos.entity";
-import {MascotaEntity} from "../mascota/mascota.entity";
 
 @Entity('Desarrolladora')
 export class DesarrolladoraEntity {

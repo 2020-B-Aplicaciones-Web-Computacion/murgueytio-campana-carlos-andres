@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="254d6463-fb7f-442e-8fd5-5aebc7b1d0fe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/sessions/2ZZCOz5ffc9FRSKUBkBtspn4jqbcCBx0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/sessions/CQQuwgThwnmEORHbLYve2712Kzr4KuyM.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/sessions/ODt1EB0ZTk-D0lX_NThawEbuGCfIA_We.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/sessions/Qtveq9mrDBHso5i6NaUSuj7YXnOIkuDQ.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/sessions/gAnrFvPPFp9hShinPVgktVKkxw4nvmZg.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/clases/src/desarrolladora/desarrolladora.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/desarrolladora/desarrolladora.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/src/videojuegos/videojuegos.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/videojuegos/videojuegos.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/views/desarrolladoras/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/clases/views/desarrolladoras/home.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/views/videojuegos/homeVideojuegos.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/clases/views/videojuegos/homeVideojuegos.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/src/desarrolladora/desarrolladora.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clases/src/desarrolladora/desarrolladora.entity.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +89,8 @@
       <workItem from="1616282816156" duration="351000" />
       <workItem from="1616283200360" duration="727000" />
       <workItem from="1616295966267" duration="5669000" />
+      <workItem from="1616437613044" duration="4090000" />
+      <workItem from="1616521296322" duration="2892000" />
     </task>
     <servers />
   </component>
